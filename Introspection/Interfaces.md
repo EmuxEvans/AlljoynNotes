@@ -24,7 +24,9 @@ Defines the members of the interface. There are 3 types:
       <annotation name="org.alljoyn.Bus.Type.Max" value="1000"/>
     </property>
 ```
-access: optional. Values: `read`, `readwrite`.
+type: See [Datatypes](Datatypes.md)
+
+access: Values: `read`, `readwrite`.
 
 Annotations (optional): 
 - `org.freedesktop.DBus.Property.EmitsChangedSignal` means this will be emitting the changed signal when the value changes . 
