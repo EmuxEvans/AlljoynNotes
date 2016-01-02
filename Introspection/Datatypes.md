@@ -5,9 +5,9 @@ http://dbus.freedesktop.org/doc/dbus-specification.html#type-system
 |--------	|-----	|---------------------------------------------------------------------------------------|
 | Int16  	| `n` 	| A signed 16-bit integer. Valid values are (+/-) 32,767.                         	|
 | UInt16 	| `q` 	| An unsigned 16-bit integer. Valid values are 0 to 65,535.                       	|
-| Int32  	| `i` 	| A signed 32-bit integer. Valid values are (+/-) 0 to 2,147,483,647.             	|
+| Int32  	| `i` 	| A signed 32-bit integer. Valid values are (+/-) 2,147,483,647.             	|
 | UInt32 	| `u` 	| An unsigned 32-bit integer. Valid values are 0 to 4,294,967,295.                	|
-| Int64  	| `x` 	| A signed 64-bit integer. Valid values are (+/-) 0 to 9,223,372,036,854,775,807. 	|
+| Int64  	| `x` 	| A signed 64-bit integer. Valid values are (+/-) 9,223,372,036,854,775,807. 	|
 | UInt64	| `t`	|An unsigned 64-bit integer. Valid values are 0 to 18,446,744,073,709,551,616. 	|
 | Double        | `d` | A double-precision (64-bit) IEEE 754 floating point value. |
 | Byte          | `y` | A single byte (a string of eight binary digits). |
