@@ -1,4 +1,3 @@
-http://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names
 
 Defines the members of the interface. There are 3 types:
 - Methods (that can be invoked)
@@ -17,14 +16,19 @@ Defines the members of the interface. There are 3 types:
 
 ### Property
 ```xml
-    <property name="IsOn" type="b" access="read">
+    <property name="Temperature" type="d" access="read">
+      <description language="en">The temperature measured by the sensor.</description>
       <annotation name="org.freedesktop.DBus.Property.EmitsChangedSignal" value="true"/>
+      <annotation name="org.alljoyn.Bus.Type.Units" value="degrees Celcius"/>
+      <annotation name="org.alljoyn.Bus.Type.Min" value="−273.15"/>
+      <annotation name="org.alljoyn.Bus.Type.Max" value="1000"/>
     </property>
 ```
-access: optional. Default: TODO
+access: optional. Values: `read`, `readwrite`.
 
-Annotations (optional): EmitsChangedSignal means this will be emitting the changed signal when the value changes  
-
+Annotations (optional): 
+- `org.freedesktop.DBus.Property.EmitsChangedSignal` means this will be emitting the changed signal when the value changes . 
+- `org.alljoyn.Bus.Type.Units` for units. Use SI Units where possible.
 
 ### Signal
 
@@ -42,3 +46,10 @@ Interface names should start with the reversed DNS domain name of the author of 
 For instance, if the owner of example.com is developing a D-Bus API for a music player, they might define interfaces called com.example.MusicPlayer1, com.example.MusicPlayer1.Track and com.example.MusicPlayer1.Seekable. 
 
 D-Bus does not distinguish between the concepts that would be called classes and interfaces in Java: either can be identified on D-Bus by an interface name. 
+
+
+
+References:
+http://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol-names
+https://wiki.allseenalliance.org/irb/interface_design_guidelines_1.1
+https://wiki.allseenalliance.org/irb/xmlv2
