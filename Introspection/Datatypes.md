@@ -17,6 +17,7 @@ http://dbus.freedesktop.org/doc/dbus-specification.html#type-system
 | Struct        | `(`...`)` | Ie a struct of string, bool and int: `(sbi)` |
 | Dictionary    | `{`...`}` |  For instance string,int dictionary: `{si}` |
 | Variant       | `v` |  In .NET-speak an 'object' of any type. |
+| DBUS Object path | `o` |  Currently not supported by Microsoft's code generator. |
 
 An array can be of any type, such as this array-of-struct-with-two-int32-fields `a(ii)` or
 this array of array of integer `aai`.
